@@ -13,8 +13,6 @@ def won?(board)
       if board[index] == board[combo[0]]
         return combo
       end
-    elsif combo.all? { |index| board[index] == "O"}
-      return combo
     end
   end
   return false
