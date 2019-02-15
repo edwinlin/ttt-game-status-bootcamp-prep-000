@@ -10,8 +10,7 @@ def won?(board)
   
   WIN_COMBINATIONS.each do |combo|
     if combo.all? do |index| 
-      board[index] == "X"
-      return combo
+      board[index] == board[combo[0]]
     elsif combo.all? { |index| board[index] == "O"}
       return combo
     end
